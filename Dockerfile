@@ -18,7 +18,7 @@ RUN git clone --depth 1 --branch ${chainlink_version} https://github.com/smartco
 RUN cd chainlink && . ~/.bashrc && make install
 
 # ******* Stage: base ******* #
-FROM ubuntu:20.04 as base
+FROM ubuntu:26.04 as base
 
 RUN apt update && apt install --yes --no-install-recommends \
     ca-certificates \
